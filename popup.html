@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>>BLOXFIND</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <div class="container">
+        <h1>BLOXFIND</h1>
+
+
+        <div class="controls">
+        <button id="scan-page">Scan Current Profile</button>
+        <div class="manual-scan">
+        <input id="manual-id" placeholder="Enter Roblox user ID" inputmode="numeric" />
+        <button id="scan-id">Scan UserID</button>
+        </div>
+
+
+        <div class="filters">
+            <label>Friends threshold
+                <input id="threshold" type="number" min="0" value="3" />
+            </label>
+                <label>Age threshold (years, 0 = ignore):
+                <input id="max-age" type="number" min="0" value="0" />
+            </label>
+        </div>
+
+
+        <button id="copy-results">Copy Results</button>
+        <p class="info">Do NOT close this popup while scanning, it will cancel the scan and remove all results.</p>
+        <div id="status" class="status">Ready</div>
+        </div>
+
+
+        <div id="results" class="results">
+        <h2>Matches (<span id="count">0</span>)</h2>
+        <div id="list"></div>
+        </div>
+        </div>
+
+        <script src="cpaj.js"></script>
+        <script src="popup.js"></script>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+{
+    "manifest_version": 2,
+    "name": "BLOXFIND",
+    "version": "1.0",
+    "description": "Scan a Roblox user's friends and find possible alt accounts.",
+    "icons": {
+        "256": "icons/icon.png"
+    },
+    "permissions": [
+        "activeTab",
+        "tabs",
+        "storage",
+        "notifications",
+        "https://friends.roblox.com/*",
+        "https://users.roblox.com/*",
+        "https://roblox.com/*",
+        "https://api.roblox.com/*"
+    ],
+        "browser_action": {
+            "default_title": "BLOXFIND",
+            "default_popup": "popup.html",
+            "default_icon": "icons/icon.png"
+    },
+    "content_scripts": [
+        {
+        "matches": ["*://*.roblox.com/users/*/profile*"],
+        "js": ["content_script.js"]
+        }
+    ]
+}
